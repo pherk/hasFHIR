@@ -25,21 +25,29 @@ source-repository head
 
 library
   exposed-modules:
-      FHIR.Model
-      FHIR.Schema
-      FHIR.SearchParameters
-      FHIR.Types
-      FHIR.XML
-      FHIR.XML.OneOf146
-      FHIR.XML.OneOf50
+      Data.FHIR.Model
+--      FHIR.Schema
+--      FHIR.SearchParameters
+      Data.FHIR.Types
+      Data.FHIR.XML
   other-modules:
       Paths_hasFHIR
+      Data.FHIR.XML.OneOf146
+      Data.FHIR.XML.OneOf50
+      Data.Aeson.DeriveNoPrefix
   hs-source-dirs:
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.11 && <10
+    , aeson
+    , HaXml
     , rio >=0.1.12.0
+    , servant
+    , servant-server
+    , template-haskell
+    , utf8-string
+    , uuid
   default-language: Haskell2010
 
 executable hasFHIR-exe

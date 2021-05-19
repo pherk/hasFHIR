@@ -2,14 +2,17 @@
 {-# LANGUAGE TemplateHaskell #-}
 module Main (main) where
 
-import Import
-import Run
+import Data.FHIR.Model
+import RIO
 import RIO.Process
 import Options.Applicative.Simple
 import qualified Paths_hasFHIR
+import System.IO
 
 main :: IO ()
 main = do
+  print "test"
+{-
   (options, ()) <- simpleOptions
     $(simpleVersion Paths_hasFHIR.version)
     "Header for command line arguments"
@@ -30,3 +33,4 @@ main = do
           , appOptions = options
           }
      in runRIO app run
+-}
