@@ -12,8 +12,9 @@ import qualified Data.UUID as UUID
 import GHC.Generics
 import GHC.TypeLits
 import Servant
+import RIO
 import qualified RIO.Map as Map
-import qualified RIO.Text    (pack, unpack)
+import qualified RIO.Text as T
  
 
 newtype RID = RID UUID.UUID
