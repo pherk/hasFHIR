@@ -58,7 +58,7 @@ instance FromHttpApiData FHIR_Type where
       "Patient"              -> return $ FHIR_Patient
       _ -> Left . T.pack $ "no valid FHIR type " ++ show piece
 
-data Resource
+data ResourceType
   = FhirAccount
   | FhirActivityDefinition
   | FhirAdverseEvent
